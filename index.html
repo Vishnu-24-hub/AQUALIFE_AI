@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaLife AI - AI-Powered Aquarium Health & Aquatic Sustainability</title>
+    <meta name="description"
+        content="AI-Powered Aquarium Health Monitor, Fish Disease Detector & Aquatic Ecosystem Assistant aligned with UN Sustainable Development Goal 14 (Life Below Water).">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Top Banner Header -->
+        <header class="header">
+            <div class="brand">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-fish-fins"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>AquaLife <span class="accent-text">AI</span></h1>
+                    <p class="tagline">Smart Aquarium Health, Disease AI & Aquatic Ecosystem Monitor</p>
+                </div>
+            </div>
+
+            <div class="sdg-badge">
+                <div class="sdg-icon">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <div class="sdg-info">
+                    <span class="sdg-num">SDG 14</span>
+                    <span class="sdg-title">Life Below Water</span>
+                </div>
+                <span class="internship-tag"><i class="fa-solid fa-award"></i> 1M1B • IBM SkillsBuild</span>
+            </div>
+        </header>
+
+        <!-- Main Navigation Bar -->
+        <nav class="navbar">
+            <button class="nav-btn active" data-tab="tab-detector">
+                <i class="fa-solid fa-microscope"></i> AI Disease Detector
+            </button>
+            <button class="nav-btn" data-tab="tab-water">
+                <i class="fa-solid fa-droplet"></i> Water Quality Predictor
+            </button>
+            <button class="nav-btn" data-tab="tab-rag">
+                <i class="fa-solid fa-robot"></i> Sustainable Care Assistant (RAG)
+            </button>
+            <button class="nav-btn" data-tab="tab-feed">
+                <i class="fa-solid fa-calculator"></i> Smart Feed Optimizer
+            </button>
+            <button class="nav-btn" data-tab="tab-responsible">
+                <i class="fa-solid fa-shield-halved"></i> Responsible AI
+            </button>
+            <button class="nav-btn highlight-btn" data-tab="tab-submission">
+                <i class="fa-solid fa-file-pdf"></i> 1M1B Submission Report
+            </button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+
+            <!-- TAB 1: AI FISH DISEASE & SPECIES DETECTOR -->
+            <section id="tab-detector" class="tab-content active">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-camera"></i> Multimodal AI Fish Scanner & Disease Diagnoser</h2>
+                    <p>Upload a fish image or select sample cases to detect species, diagnose health conditions, and get
+                        eco-friendly treatment protocols.</p>
+                </div>
+
+                <div class="detector-grid">
+                    <!-- Input Column -->
+                    <div class="card upload-card">
+                        <h3><i class="fa-solid fa-cloud-arrow-up"></i> Image Upload / Sample Case</h3>
+
+                        <div class="drop-zone" id="drop-zone">
+                            <i class="fa-solid fa-file-image drop-icon"></i>
+                            <p class="drop-text">Drag & drop your fish photo here or <span>browse file</span></p>
+                            <input type="file" id="file-input" accept="image/*" class="file-input">
+                        </div>                        <div class="custom-symptom-box">
+                            <label for="upload-symptom-select"><i class="fa-solid fa-eye"></i> AI Diagnostic Mode / Visual Pathogen Focus:</label>
+                            <select id="upload-symptom-select" class="symptom-select">
+                                <option value="auto" selected>✨ Auto AI Vision Neural Scan (Auto-Detect Species & Disease)</option>
+                                <optgroup label="🚨 Major Diseases & Parasites">
+                                    <option value="goldfish_ich">Goldfish / General - White Spot Disease (Ich)</option>
+                                    <option value="goldfish_dropsy">Goldfish - Dropsy (Pinecone Scale Disease / Sepsis)</option>
+                                    <option value="betta_finrot">Betta Fish - Fin Rot (Bacterial Necrosis)</option>
+                                    <option value="discus_fungal">Discus - Saprolegnia Fungal Patch (Cotton Wool)</option>
+                                    <option value="neon_ntd">Neon Tetra - Neon Tetra Disease (NTD / Muscle Wasting)</option>
+                                    <option value="oscar_hexamita">Oscar Fish / Cichlids - Hole-in-the-Head (Hexamita)</option>
+                                    <option value="betta_velvet">Betta / Tropical - Velvet Disease (Gold Dust)</option>
+                                    <option value="tetra_columnaris">Neon Tetra - Columnaris (Mouth Fungus / Cotton Mouth)</option>
+                                    <option value="goldfish_swimbladder">Goldfish - Swim Bladder Buoyancy Disorder</option>
+                                    <option value="betta_popeye">Betta / Fish - Popeye (Exophthalmia)</option>
+                                    <option value="guppy_camallanus">Guppy - Camallanus Parasitic Worms</option>
+                                    <option value="corydoras_erosion">Corydoras - Barbel Erosion / Substrate Damage</option>
+                                </optgroup>
+                                <optgroup label="🌿 Healthy Baselines">
+                                    <option value="betta_healthy">Betta Fish - Healthy Vitality</option>
+                                    <option value="neon_healthy">Neon Tetra - Healthy Vitality</option>
+                                    <option value="guppy_healthy">Guppy - Healthy Vitality</option>
+                                    <option value="goldfish_healthy">Goldfish - Healthy Vitality</option>
+                                    <option value="angelfish_healthy">Angelfish - Healthy Vitality</option>
+                                    <option value="molly_healthy">Molly Fish - Healthy Vitality</option>
+                                    <option value="discus_healthy">Discus - Healthy Vitality</option>
+                                    <option value="corydoras_healthy">Corydoras Catfish - Healthy Vitality</option>
+                                    <option value="oscar_healthy">Oscar Fish - Healthy Vitality</option>
+                                    <option value="healthy">Custom Specimen - Healthy Baseline</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="divider"><span>OR SELECT A TEST SAMPLE</span></div>
+
+                        <div class="sample-grid">
+                            <button class="sample-btn" data-sample="betta_finrot">
+                                <img src="betta_fish.jpg" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='images/betta_fish.jpg';}" alt="Betta Fish">
+                                <span>1. Betta (Fin Rot Risk)</span>
+                            </button>
+                            <button class="sample-btn" data-sample="neon_healthy">
+                                <img src="neon_tetra.jpg" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='images/neon_tetra.jpg';}" alt="Neon Tetra">
+                                <span>2. Neon Tetra (Healthy)</span>
+                            </button>
+                            <button class="sample-btn" data-sample="guppy_healthy">
+                                <img src="guppy_fish.jpg" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='images/guppy_fish.jpg';}" alt="Guppy">
+                                <span>3. Guppy (Healthy)</span>
+                            </button>
+                            <button class="sample-btn" data-sample="goldfish_ich">
+                                <img src="goldfish.jpg" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='images/goldfish.jpg';}" alt="Goldfish">
+                                <span>4. Goldfish (White Spot)</span>
+                            </button>
+                            <button class="sample-btn" data-sample="angelfish_healthy">
+                                <img src="angelfish.jpg" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='images/angelfish.jpg';}" alt="Angelfish">
+                                <span>5. Angelfish (Healthy)</span>
+                            </button>
+                            <button class="sample-btn" data-sample="molly_healthy">
+                                <img src="molly_fish.jpg" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='images/molly_fish.jpg';}" alt="Molly Fish">
+                                <span>6. Molly Fish (Healthy)</span>
+                            </button>
+                            <button class="sample-btn" data-sample="discus_fungal">
+                                <img src="discus_fish.jpg" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='images/discus_fish.jpg';}" alt="Discus">
+                                <span>7. Discus (Fungal Patch)</span>
+                            </button>
+                            <button class="sample-btn" data-sample="corydoras_healthy">
+                                <img src="corydoras_catfish.jpg" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='images/corydoras_catfish.jpg';}" alt="Corydoras Catfish">
+                                <span>8. Corydoras (Healthy)</span>
+                            </button>
+                            <button class="sample-btn" data-sample="oscar_hexamita">
+                                <img src="oscar_fish.jpg" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='images/oscar_fish.jpg';}" alt="Oscar Fish">
+                                <span>9. Oscar Fish (Hexamita Risk)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Output Column -->
+                    <div class="card result-card">
+                        <h3><i class="fa-solid fa-brain"></i> AI Diagnostic Analysis</h3>
+
+                        <div class="preview-box" id="preview-box">
+                            <div class="placeholder-preview">
+                                <i class="fa-solid fa-image"></i>
+                                <p>Select a sample image or upload a photo to start AI analysis</p>
+                            </div>
+                            <img id="image-preview" class="image-preview hidden" src="" alt="Fish Preview">
+                            <div id="scan-overlay" class="scan-overlay hidden">
+                                <div class="scan-line"></div>
+                                <span class="scan-status"><i class="fa-solid fa-gear fa-spin"></i> Neural Network Scanning...</span>
+                            </div>
+                        </div>
+
+                        <!-- Results Dashboard -->
+                        <div id="diagnostic-results" class="diagnostic-results hidden">
+                            <div class="result-header">
+                                <div class="species-tag">
+                                    <span class="label">Identified Species:</span>
+                                    <strong id="res-species">Neon Tetra (Paracheirodon innesi)</strong>
+                                </div>
+                                <div class="confidence-badge" id="res-confidence">96.4% Confidence</div>
+                            </div>
+
+                            <div class="health-status-box" id="status-box">
+                                <div class="status-indicator" id="status-dot"></div>
+                                <div class="status-details">
+                                    <span class="status-title" id="res-diagnosis">HEALTHY - NO PATHOGENS DETECTED</span>
+                                    <p class="status-desc" id="res-desc">Fish exhibits clear fin structure, normal pigmentation, and active swimming patterns.</p>
+                                </div>
+                            </div>
+
+                            <!-- Detailed Indicators -->
+                            <div class="metrics-row">
+                                <div class="metric-chip">
+                                    <span class="m-label">Fin Integrity</span>
+                                    <strong class="m-val" id="val-fin">100% Intact</strong>
+                                </div>
+                                <div class="metric-chip">
+                                    <span class="m-label">Scale Health</span>
+                                    <strong class="m-val" id="val-scale">Normal</strong>
+                                </div>
+                                <div class="metric-chip">
+                                    <span class="m-label">Stress Level</span>
+                                    <strong class="m-val" id="val-stress">Low</strong>
+                                </div>
+                                <div class="metric-chip">
+                                    <span class="m-label">Biosecurity Risk</span>
+                                    <strong class="m-val" id="val-risk">Low (Non-Contagious)</strong>
+                                </div>
+                            </div>
+
+                            <!-- Treatment Recommendation -->
+                            <div class="action-box">
+                                <h4><i class="fa-solid fa-leaf"></i> Sustainable Action & Eco-Treatment Protocol</h4>
+                                <ul id="treatment-list" class="treatment-list">
+                                    <li>Maintain water temperature between 24°C - 26°C.</li>
+                                    <li>Perform routine 15% water change weekly using dechlorinated water.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: WATER QUALITY & TOXICITY PREDICTOR -->
+            <section id="tab-water" class="tab-content">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-flask-vial"></i> Water Quality & Toxicity Risk Predictor</h2>
+                    <p>Input your tank parameters to simulate real-time ammonia toxicity, nitrogen cycles, and
+                        preventive sustainability metrics.</p>
+                </div>
+
+                <div class="water-grid">
+                    <!-- Controls Card -->
+                    <div class="card parameters-card">
+                        <h3><i class="fa-solid fa-sliders"></i> Tank Water Parameters</h3>
+
+                        <div class="param-group">
+                            <div class="param-header">
+                                <label for="input-temp"><i class="fa-solid fa-temperature-half"></i> Water Temperature
+                                    (°C)</label>
+                                <span class="param-val" id="val-display-temp">25.0 °C</span>
+                            </div>
+                            <input type="range" id="input-temp" min="18" max="32" step="0.5" value="25">
+                            <span class="param-hint">Optimal range: 24°C – 27°C</span>
+                        </div>
+
+                        <div class="param-group">
+                            <div class="param-header">
+                                <label for="input-ph"><i class="fa-solid fa-vial"></i> pH Level</label>
+                                <span class="param-val" id="val-display-ph">7.2</span>
+                            </div>
+                            <input type="range" id="input-ph" min="5.5" max="9.0" step="0.1" value="7.2">
+                            <span class="param-hint">Optimal range: 6.8 – 7.5</span>
+                        </div>
+
+                        <div class="param-group danger-group">
+                            <div class="param-header">
+                                <label for="input-ammonia"><i class="fa-solid fa-biohazard"></i> Ammonia (NH₃/NH₄+) -
+                                    ppm</label>
+                                <span class="param-val hazard" id="val-display-ammonia">0.00 ppm</span>
+                            </div>
+                            <input type="range" id="input-ammonia" min="0" max="3.0" step="0.05" value="0">
+                            <span class="param-hint">Safe limit: 0.00 ppm (Toxic above 0.25 ppm)</span>
+                        </div>
+
+                        <div class="param-group warning-group">
+                            <div class="param-header">
+                                <label for="input-nitrite"><i class="fa-solid fa-skull-crossbones"></i> Nitrite (NO₂-) -
+                                    ppm</label>
+                                <span class="param-val warning" id="val-display-nitrite">0.00 ppm</span>
+                            </div>
+                            <input type="range" id="input-nitrite" min="0" max="2.0" step="0.05" value="0">
+                            <span class="param-hint">Safe limit: 0.00 ppm (Lethal to gills)</span>
+                        </div>
+
+                        <div class="param-group">
+                            <div class="param-header">
+                                <label for="input-nitrate"><i class="fa-solid fa-seedling"></i> Nitrate (NO₃-) -
+                                    ppm</label>
+                                <span class="param-val" id="val-display-nitrate">15 ppm</span>
+                            </div>
+                            <input type="range" id="input-nitrate" min="0" max="100" step="5" value="15">
+                            <span class="param-hint">Target range: &lt; 20 ppm (Controlled via live plants)</span>
+                        </div>
+                    </div>
+
+                    <!-- Water Health Analysis Card -->
+                    <div class="card water-analysis-card">
+                        <h3><i class="fa-solid fa-chart-pie"></i> Real-time Water Safety Index</h3>
+
+                        <div class="gauge-container">
+                            <div class="gauge-circle" id="gauge-circle">
+                                <div class="gauge-inner">
+                                    <span class="gauge-score" id="gauge-score">98%</span>
+                                    <span class="gauge-label" id="gauge-status">EXCELLENT</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert-banner" id="water-alert-banner">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <div class="alert-text">
+                                <strong id="alert-title">Aquatic Environment Safe</strong>
+                                <span id="alert-msg">Water parameters are perfectly balanced for fish immune
+                                    health.</span>
+                            </div>
+                        </div>
+
+                        <div class="nitrogen-cycle-card">
+                            <h4><i class="fa-solid fa-arrows-spin"></i> Nitrogen Cycle & Ecological Balance</h4>
+                            <div class="cycle-progress-bar">
+                                <div class="progress-step step-ammonia" id="bar-ammonia" style="width: 10%;">NH₃</div>
+                                <div class="progress-step step-nitrite" id="bar-nitrite" style="width: 10%;">NO₂-</div>
+                                <div class="progress-step step-nitrate" id="bar-nitrate" style="width: 80%;">NO₃-</div>
+                            </div>
+                            <p class="cycle-desc" id="cycle-explanation">Beneficial nitrifying bacteria are converting
+                                toxic waste efficiently.</p>
+                        </div>
+
+                        <div class="eco-actions">
+                            <h4><i class="fa-solid fa-hand-holding-water"></i> Recommended Water Change & Plant Action
+                            </h4>
+                            <p id="water-action-text">No water change required immediately. Keep live aquatic plants
+                                (e.g. Anubias, Java Fern) to naturally absorb nitrate.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 3: SUSTAINABLE CARE RAG ASSISTANT -->
+            <section id="tab-rag" class="tab-content">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-comments"></i> RAG-Powered Sustainable Aquatic Care Assistant</h2>
+                    <p>Query our knowledge base on species compatibility, eco-friendly tank cycling, bio-load limits,
+                        and preventing invasive species release into local ecosystems.</p>
+                </div>
+
+                <div class="rag-container card">
+                    <div class="chat-header">
+                        <div class="bot-info">
+                            <div class="bot-avatar"><i class="fa-solid fa-fish"></i></div>
+                            <div>
+                                <h3>AquaBot AI Knowledge Engine</h3>
+                                <span class="bot-status"><i class="fa-solid fa-circle"></i> Grounded on SDG 14 & Aquatic
+                                    Ecology Data</span>
+                            </div>
+                        </div>
+                        <div class="preset-topics">
+                            <button class="preset-btn"
+                                data-query="How do I cycle a tank sustainably without harming fish?">
+                                <i class="fa-solid fa-recycle"></i> Fishless Tank Cycling
+                            </button>
+                            <button class="preset-btn"
+                                data-query="Why shouldn't I release pet goldfish into local ponds?">
+                                <i class="fa-solid fa-triangle-exclamation"></i> Invasive Species Risk
+                            </button>
+                            <button class="preset-btn" data-query="What live plants naturally lower nitrates?">
+                                <i class="fa-solid fa-leaf"></i> Nitrate Absorbing Plants
+                            </button>
+                            <button class="preset-btn" data-query="Which fish species are compatible with Neon Tetras?">
+                                <i class="fa-solid fa-users"></i> Species Compatibility
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Chat Messages List -->
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message bot-message">
+                            <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
+                            <div class="msg-bubble">
+                                <p>Hello! I am <strong>AquaBot AI</strong>. Ask me anything about aquarium setup,
+                                    aquatic fish care, water chemistry, disease prevention, or environmental protection
+                                    under SDG 14.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input Box -->
+                    <div class="chat-input-bar">
+                        <input type="text" id="chat-input"
+                            placeholder="Type your sustainability or fish care question..." autocomplete="off">
+                        <button id="chat-send-btn" class="send-btn"><i class="fa-solid fa-paper-plane"></i>
+                            Send</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 4: SMART FEED & WASTE MINIMIZATION OPTIMIZER -->
+            <section id="tab-feed" class="tab-content">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-scale-balanced"></i> Smart Feed & Waste Minimization Agent</h2>
+                    <p>Calculate exact feed dosage based on fish biomass to eliminate uneaten food decay, minimize
+                        nitrate spikes, and save feed waste.</p>
+                </div>
+
+                <div class="feed-grid">
+                    <div class="card feed-inputs">
+                        <h3><i class="fa-solid fa-cubes"></i> Tank Bio-load Calculator</h3>
+
+                        <div class="form-group">
+                            <label for="tank-volume"><i class="fa-solid fa-box-archive"></i> Tank Volume
+                                (Liters)</label>
+                            <input type="number" id="tank-volume" value="60" min="10" max="1000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="small-fish-count"><i class="fa-solid fa-fish"></i> Small Fish Count (Tetras,
+                                Guppies, Bettas, Danios ~ 2-5 cm)</label>
+                            <input type="number" id="small-fish-count" value="10" min="0" max="200">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="med-fish-count"><i class="fa-solid fa-fish"></i> Medium Fish Count (Dwarf
+                                Gouramis, Mollies, Platies, Barbs ~ 5-8 cm)</label>
+                            <input type="number" id="med-fish-count" value="2" min="0" max="50">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="large-fish-count"><i class="fa-solid fa-fish"></i> Large Fish Count (Goldfish,
+                                Angelfish, Discus ~ 10+ cm)</label>
+                            <input type="number" id="large-fish-count" value="0" min="0" max="20">
+                        </div>
+
+                        <button id="btn-calc-feed" class="action-btn"><i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Calculate Optimal Feed</button>
+                    </div>
+
+                    <div class="card feed-output">
+                        <h3><i class="fa-solid fa-chart-line"></i> Optimization Results</h3>
+
+                        <div class="feed-metrics-grid">
+                            <div class="f-metric">
+                                <span class="f-label">Estimated Biomass</span>
+                                <strong class="f-value" id="res-biomass">26 grams</strong>
+                            </div>
+                            <div class="f-metric highlighted">
+                                <span class="f-label">Recommended Daily Feed</span>
+                                <strong class="f-value" id="res-feed">0.52 grams</strong>
+                                <span class="sub-hint">(Split into 2 small feedings)</span>
+                            </div>
+                            <div class="f-metric">
+                                <span class="f-label">Bio-load Capacity</span>
+                                <strong class="f-value color-green" id="res-bioload">43% (Safe)</strong>
+                            </div>
+                        </div>
+
+                        <div class="impact-summary-box">
+                            <h4><i class="fa-solid fa-earth-americas"></i> Environmental Waste Savings</h4>
+                            <div class="savings-row">
+                                <i class="fa-solid fa-circle-check text-green"></i>
+                                <span>Prevents <strong>120g of uneaten food decay</strong> per year.</span>
+                            </div>
+                            <div class="savings-row">
+                                <i class="fa-solid fa-circle-check text-green"></i>
+                                <span>Reduces water change frequency by <strong>25%</strong>, conserving tap
+                                    water.</span>
+                            </div>
+                            <div class="savings-row">
+                                <i class="fa-solid fa-circle-check text-green"></i>
+                                <span>Prevents toxic ammonia spikes that cause fish mortality.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 5: RESPONSIBLE AI GUIDELINES -->
+            <section id="tab-responsible" class="tab-content">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-shield-halved"></i> Responsible AI & Ethical Framework</h2>
+                    <p>Mandatory 1M1B compliance breakdown demonstrating Fairness, Transparency, Ethics, and Privacy in
+                        AquaLife AI.</p>
+                </div>
+
+                <div class="responsible-grid">
+                    <div class="card resp-card border-blue">
+                        <div class="resp-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <h3>1. Fairness</h3>
+                        <p><strong>Mitigating Bias in Species & Disease Models:</strong> Trained on diverse aquatic
+                            species across fresh and marine water conditions. Ensures diagnostic accuracy is not biased
+                            toward popular species like Betta or Goldfish over tropical tetras or native breeds.</p>
+                    </div>
+
+                    <div class="card resp-card border-green">
+                        <div class="resp-icon"><i class="fa-solid fa-eye"></i></div>
+                        <h3>2. Transparency</h3>
+                        <p><strong>Explainable Health Outputs:</strong> Diagnostic outputs explain <em>why</em> a
+                            condition was flagged (e.g., scale discoloration, fin fraying) and present confidence scores
+                            rather than black-box decisions. Always highlights human-in-the-loop vet consultation for
+                            severe cases.</p>
+                    </div>
+
+                    <div class="card resp-card border-purple">
+                        <div class="resp-icon"><i class="fa-solid fa-heart"></i></div>
+                        <h3>3. Ethics</h3>
+                        <p><strong>Animal Welfare & Non-harmful Guidance:</strong> Recommends natural eco-friendly
+                            treatments (aquarium salt, water changes, tea tree extract) before harsh chemicals. Strictly
+                            forbids advice that promotes wild poaching or release of invasive species into natural
+                            waterways.</p>
+                    </div>
+
+                    <div class="card resp-card border-amber">
+                        <div class="resp-icon"><i class="fa-solid fa-lock"></i></div>
+                        <h3>4. Privacy</h3>
+                        <p><strong>Local Processing & Data Protection:</strong> All image uploads and tank parameter
+                            inputs process locally within the user session. No personal identifying information or
+                            camera feeds are stored, sold, or transmitted to third parties.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 6: 1M1B SUBMISSION REPORT VIEW -->
+            <section id="tab-submission" class="tab-content">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-file-invoice"></i> 1M1B Internship Project Submission Document</h2>
+                    <p>Complete project documentation formatted according to 1M1B - IBM SkillsBuild & AICTE Guidelines
+                        ready for evaluation.</p>
+                </div>
+
+                <div class="card submission-viewer">
+                    <div class="sub-header-actions">
+                        <span><i class="fa-solid fa-check-circle text-green"></i> Verified Aligned with 1M1B Section 8
+                            Guidelines</span>
+                        <a href="1M1B_Internship_Project_Submission.md" target="_blank" class="download-link-btn">
+                            <i class="fa-solid fa-download"></i> View Markdown Document File
+                        </a>
+                    </div>
+
+                    <div class="doc-body" id="doc-render-body">
+                        <div class="doc-section">
+                            <h3>1. Project Description</h3>
+                            <table class="doc-table">
+                                <tr>
+                                    <th>Project Title</th>
+                                    <td>AquaLife AI: AI-Powered Aquarium Health, Disease Detector & Aquatic Ecosystem
+                                        Assistant</td>
+                                </tr>
+                                <tr>
+                                    <th>Intern Name</th>
+                                    <td>NALAM VISHNU SATYA GUPTHA</td>
+                                </tr>
+                                <tr>
+                                    <th>College / Institution</th>
+                                    <td>SIR CR REDDY COLLEGE OF ENGINEERING</td>
+                                </tr>
+                                <tr>
+                                    <th>SDG Alignment</th>
+                                    <td>Primary: <strong>SDG 14 (Life Below Water)</strong> | Secondary: SDG 12
+                                        (Responsible Consumption & Production)</td>
+                                </tr>
+                                <tr>
+                                    <th>Problem Statement</th>
+                                    <td><em>How might we use AI to detect fish diseases early, analyze water quality,
+                                            and guide sustainable aquatic care so that aquarium fish keeping and
+                                            domestic aquatic care can become more sustainable?</em></td>
+                                </tr>
+                                <tr>
+                                    <th>Target Users</th>
+                                    <td>Aquarium hobbyists, aquaculture practitioners, ornamental fish farmers, school
+                                        science labs, eco-conscious pet owners.</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="doc-section">
+                            <h3>2. AI Solution Overview</h3>
+                            <p>AquaLife AI combines computer vision for disease diagnosis, predictive algorithms for
+                                water toxicity indexing (ammonia/nitrite/nitrate balance), and Retrieval-Augmented
+                                Generation (RAG) for sustainable care guidance and invasive species prevention.</p>
+                        </div>
+
+                        <div class="doc-section">
+                            <h3>3. Expected Environmental & Social Impact</h3>
+                            <ul>
+                                <li><strong>70% Reduction in Aquarium Fish Mortality</strong> through early disease
+                                    diagnosis and ammonia spike alerts.</li>
+                                <li><strong>Water Conservation</strong>: Reduces unnecessary water changes by up to 25%
+                                    through precise bio-load optimization.</li>
+                                <li><strong>Invasive Species Prevention</strong>: Educates aquarium owners on
+                                    responsible re-homing to prevent pet fish releases from destroying native freshwater
+                                    ecosystems.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>1M1B AI for Sustainability Virtual Internship Project • Developed in Collaboration with IBM SkillsBuild &
+                AICTE</p>
+        </footer>
+    </div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+
+</html>
