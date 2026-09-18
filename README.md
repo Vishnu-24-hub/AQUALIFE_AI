@@ -7,8 +7,8 @@
 ## 1. Project Title & Student Information
 
 - **Project Title**: **AquaLife AI: AI-Powered Aquarium Health, Disease Detector & Aquatic Ecosystem Assistant**
-- **Student Name**: `[Your Full Name]`
-- **College / Institution**: `[Your College / University Name]`
+- **Student Name**: NALAM VISHNU SATYA GUPTHA
+- **College / Institution**: SIR CR REDDY COLLEGE OF ENGINEERING 
 - **Domain**: Artificial Intelligence for Sustainability & Aquatic Ecosystem Conservation
 - **Primary SDG Alignment**: **SDG 14: Life Below Water**
 - **Secondary SDG Alignment**: **SDG 12: Responsible Consumption and Production** & **SDG 3: Good Health and Well-being**
